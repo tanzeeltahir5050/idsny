@@ -3,12 +3,75 @@
 @tailwind utilities;
 
 .custom-screen {
-    @apply max-w-screen-xl mx-auto px-4 md:px-8;
+  @apply mx-auto px-4 md:px-8;
 }
-
+.slider {
+  background-image: url(/slider.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slider h1 {
+  color: white;
+  font-weight: 400;
+  text-shadow: 4px 5px 5px black;
+}
+.events {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.events .event {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+  min-height: 260px;
+}
+.events .event h3 {
+  text-align: right;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 2;
+  color: #1e355e;
+}
+.events .event a {
+  margin-top: 20px;
+  position: absolute;
+  font-size: 24px;
+  right: 10px;
+  border-radius: 30px;
+  background-color: #1e355e;
+}
+.events .title {
+  background-color: white;
+  font-size: 40px;
+  position: absolute;
+  font-weight: 700;
+  z-index: 99;
+  color: #1e355e;
+  padding-right: 10px;
+  transform: skew(-10deg);
+  transform-origin: top;
+  padding-left: 20px;
+}
+.events .event:nth-child(even) {
+  background-color: #2f5392;
+  color: white !important;
+}
+.events .event:nth-child(even) h3 {
+  color: white !important;
+}
 .gradient-border {
-    border: 1px solid transparent;
-    background: linear-gradient(white, white), linear-gradient(25deg, rgba(209, 213, 219, 1), rgba(209, 213, 219, 1), rgba(0, 0, 0, 0.63), rgba(209, 213, 219, 1), rgba(209, 213, 219, 1));
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
+  border: 1px solid transparent;
+  background: linear-gradient(white, white),
+    linear-gradient(
+      25deg,
+      rgba(209, 213, 219, 1),
+      rgba(209, 213, 219, 1),
+      rgba(0, 0, 0, 0.63),
+      rgba(209, 213, 219, 1),
+      rgba(209, 213, 219, 1)
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
 }
